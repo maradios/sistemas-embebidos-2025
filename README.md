@@ -1,1 +1,1 @@
-# sistemas-emdebidos-2025
+# sistemas-embebidos-2025
