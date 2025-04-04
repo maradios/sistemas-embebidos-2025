@@ -1,0 +1,47 @@
+#include <iostream>
+
+struct Sensor
+    {
+       int sensor_id;
+       int timestamp;
+       char value_type;
+       int value;
+    };
+    
+struct Sensor car[3];
+
+void pedirdatos(struct Sensor *sensorvacio){
+    printf("\nId del sensor: ");
+    scanf("%d",&sensorvacio->sensor_id);
+    printf("fecha y hora del sensor: ");
+    scanf("%d",&sensorvacio->timestamp);
+    printf("tipo de dato del sensor\n1-temperature\n2-pressure\n3-flow\n4-level: ");
+    scanf("%d",&sensorvacio->value_type);
+    printf("valor del dato del sensor: ");
+    scanf("%d",&sensorvacio->value);
+}
+
+   
+int main() {
+   
+    int get_highest_value=0,get_lowest_value=0,get_average_value=0,valueM=0,VM=0,valuem=0,suma=0;
+    
+    for(int i=0;i<3;i++)
+    {
+        pedirdatos(&car[i]);
+        if(valueM<car[i].value||i==0)
+        {
+            get_highest_value=car[i].value;
+        }
+        if(valuem>car[i].value||i==0)
+        {
+            get_lowest_value=car[i].value;
+        }
+        suma=suma+car[i].value;
+        get_average_value=suma/3;
+    }
+    printf("el valo mas alto de los sensores es de: %d",get_highest_value);
+    printf("\nel valo mas bajo de los sensores es de: %d",get_lowest_value);
+    printf("\nel valo promedio de los sensores es de: %d",get_average_value);
+    return 0;
+}
