@@ -1,0 +1,62 @@
+#include <iostream>
+
+struct Personas
+{
+    std::string nombreyapellido;
+    int edad;
+    char sexo;
+    char nivel;
+    char indicador;
+};
+
+struct Familias
+{
+    Personas integrantes[2];
+    char domicilio;
+    char tipodevivienda;
+};
+  
+int main() 
+{
+    Familias familia[2];
+    Personas persona11;
+    Personas persona12;
+    Personas persona21;
+    Personas persona22;
+    
+    persona11.nombreyapellido = "kudell maradona";
+    persona11.edad = 18;
+    persona11.sexo = 'M';
+    persona11.nivel = 'S';
+    persona11.indicador = 'C';
+    familia[0].integrantes[0] = persona11;
+    
+    persona12.nombreyapellido = "matias serafini";
+    persona12.edad = 18;
+    persona12.sexo = 'M';
+    persona12.nivel = 'S';
+    persona12.indicador = 'C';
+    familia[0].integrantes[1] = persona12;
+    
+    persona21.nombreyapellido = "benicio pavon";
+    persona21.edad = 18;
+    persona21.sexo = 'M';
+    persona21.nivel = 'S';
+    persona21.indicador = 'C';
+    familia[1].integrantes[0] = persona21;
+    
+    persona22.nombreyapellido = "gonzalo belmonte";
+    persona22.edad = 17;
+    persona22.sexo = 'M';
+    persona22.nivel = 'S';
+    persona22.indicador = 'C';
+    familia[1].integrantes[1] = persona22;
+    
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",Personas);
+    
+    
+    return 0;
+    } 
+}
