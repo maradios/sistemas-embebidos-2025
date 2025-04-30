@@ -1,0 +1,1 @@
+en este ejercicio sincronizamos 2 semáforos con las funciones vistas en clase
